@@ -19,7 +19,7 @@ function sass() {
 		html: 'http://starter.spip'
 	};
 	return (
-		src('css/**/*.scss')
+		src('./src/css/**/*.scss')
 			.pipe(sourcemaps.init())
 			.pipe(gulpSass({ outputStyle: 'expanded' }))
 			.on('error', err => notify().write(err))
@@ -27,7 +27,7 @@ function sass() {
 			//		.pipe(postcss([autoprefixer(), cssnano()])) // autoprefixer  +  minifier
 			//		.pipe(postcss([unuse(options_unuse), autoprefixer()])) // css unuse + autoprefixer
 			.pipe(sourcemaps.write('.')) // initialize sourcemaps first
-			.pipe(dest('css'))
+			.pipe(dest('./dist/css'))
 	);
 }
 
@@ -36,51 +36,51 @@ function sass() {
  */
 function jsConcatMinif() {
 	console.log('ok');
-	return src(['./js/a_compresser/*.js'])
+	return src(['./src/js/**/*.js'])
 		.pipe(sourcemaps.init())
 		.pipe(
 			babel({
 				presets: ['@babel/preset-env']
 			})
 		)
-		.pipe(concat('roc_squelette.min.js', { newLine: ';' }))
+		.pipe(concat('app.min.js', { newLine: ';' }))
 // SPECIFIQUE DEV: ne pas compacter le JS
 		//		.pipe(uglify())
 		.pipe(sourcemaps.write('.'))
-		.pipe(dest('./js'));
+		.pipe(dest('./dist/js'));
 }
 
 /*
  * JS -> babel
  */
 function jsBabel() {
-	return src(['js/**/*.es6.js'])
+	return src(['./src/js/**/*.apart.js'])
 		.pipe(
 			babel({
 				presets: ['@babel/preset-env']
 			})
 		)
 		.pipe(rename(/\.es6/, ''))
-		.pipe(dest('./js'));
+		.pipe(dest('./dist/js'));
 }
 
 /*
  * Les Watchers
  */
 function watcherSass() {
-	watch('css/**/*.scss', { ignoreInitial: false }, sass).on('change', function() {
+	watch('./src/css/**/*.scss', { ignoreInitial: false }, sass).on('change', function() {
 		notify('CSS -> SCSS ==> OK').write('');
 	});
 }
 
 function watcherJsConcatMinif() {
-	watch('./js/a_compresser/*.js', { ignoreInitial: false }, jsConcatMinif).on('change', function() {
+	watch('./src/**/*.js', { ignoreInitial: false }, jsConcatMinif).on('change', function() {
 		notify('JS (concat)  ==> OK').write('');
 	});
 }
 
 function watcherJsBabel() {
-	watch('./js/**/*.es6.js', { ignoreInitial: false }, jsBabel).on('change', function() {
+	watch('./src/**/*.apart.js', { ignoreInitial: false }, jsBabel).on('change', function() {
 		notify('JS (babel)  ==> OK').write('');
 	});
 }
@@ -111,13 +111,13 @@ const config = {
 
 function svgSprite() {
 	return (
-		src('svg/**/*.svg')
+		src('./src/img/svg/**/*.svg')
 			//.pipe(plumber())
 			.pipe(gulpSvgSprite(config))
 			.on('error', function(error) {
 				console.log(error);
 			})
-			.pipe(dest('img'))
+			.pipe(dest('./dist/img'))
 	);
 }
 
@@ -126,9 +126,9 @@ function svgSprite() {
  */
 var svgmin = require('gulp-svgmin');
 function svgMin() {
-	return src('svg/*.svg')
+	return src('./src/img/svg/**/*.svg')
 		.pipe(svgmin())
-		.pipe(dest('./svgmin'));
+		.pipe(dest('./dist/img/svgmin'));
 }
 
 /*

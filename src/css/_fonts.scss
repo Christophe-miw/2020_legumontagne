@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Vegur';
+    src: url('./src/fonts/Vegur-Regular-webfont.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'VegurBold';
+    src : url('./src/fonts/Vegur-Bold-webfont.woff');
+    font-weight: bold;
+}
+body { font-family: Vegur; }
