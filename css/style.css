@@ -1,8 +1,17 @@
 .filtre_vert {
+  text-align: center;
+}
+
+.filtre_vert, .menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.filtre_vert {
   background-color: #416c25;
 }
 
-.filtre_vert .menu {
+.menu {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;

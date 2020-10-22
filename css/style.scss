@@ -1,10 +1,25 @@
 $vert: #416c25;
 
+%center {
+  text-align: center;
+}
+
+%blanc {
+  color: #fff;
+  text-decoration: none;
+}
+
 .filtre_vert {
   background-color: $vert;
+  @extend %center;
+  @extend %blanc;
+}
 
-  .menu {
-    display: flex;
-    justify-content: space-around;
+.menu {
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    @extend %blanc;
   }
 }
