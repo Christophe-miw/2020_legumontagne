@@ -1,0 +1,10 @@
+$vert: #416c25;
+
+.filtre_vert {
+  background-color: $vert;
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
