@@ -1,25 +1,66 @@
-$vert: #416c25;
+$vert_fonce: #416c25;
 
-%center {
-  text-align: center;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
-%blanc {
-  color: #fff;
-  text-decoration: none;
+@mixin text_color_center($color) {
+  color: $color;
+  text-align: center;
+  a {
+    color: inherit;
+  }
+}
+
+@mixin img_100 {
+  img {
+    width: 100%;
+  }
 }
 
 .filtre_vert {
-  background-color: $vert;
-  @extend %center;
-  @extend %blanc;
+  background-color: $vert_fonce;
+  @include text_color_center(#fff);
+  font-size: 130%;
 }
 
 .menu {
   display: flex;
   justify-content: space-around;
+}
 
-  a {
-    @extend %blanc;
+.bandeau_menu {
+  @extend .menu;
+  @include text_color_center(#000);
+  .image_ab_bandeau {
+    flex-grow: 0;
+  }
+  div {
+    flex-grow: 1;
+  }
+}
+
+.image_ab_bandeau img {
+  height: 44px;
+}
+
+.cadre_vert_menu, .cadre_vert {
+  background-color: #79b51d;
+}
+
+.cadre_jaune_menu, .cadre_jaune {
+  background-color: #f6cc08;
+}
+
+.img_fond {
+  @include img_100;
+}
+
+.row {
+  display: flex;
+  height: 20px;
+  margin-bottom: 50px;
+  div {
+    width: 50%;
   }
 }
