@@ -21,12 +21,15 @@ h1, h2, h3, h4, h5, h6 {
 .filtre_vert {
   background-color: $vert_fonce;
   @include text_color_center(#fff);
-  font-size: 130%;
 }
 
 .menu {
   display: flex;
   justify-content: space-around;
+}
+
+.entree_menu {
+  padding: 10px;
 }
 
 .bandeau_menu {
@@ -58,9 +61,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .row {
   display: flex;
+  margin: 10px;
+}
+
+.row_bandes {
   height: 20px;
-  margin-bottom: 50px;
+  margin: 0 0 50px 0;
   div {
     width: 50%;
   }
 }
+
+.actus {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.img-actu {
+  width: 40%;
+  margin-right: 20px;
+  @include img_100;
+}
+
+.texte_actu {
+  width: 60%;
+}
+
