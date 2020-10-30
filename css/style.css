@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  font-size: 0.8rem;
 }
 
 .entree_menu {
@@ -47,15 +48,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .image_ab_bandeau img {
-  height: 44px;
+  height: 28px;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .cadre_vert_menu, .cadre_vert {
   background-color: #79b51d;
+  min-width: 50%;
 }
 
 .cadre_jaune_menu, .cadre_jaune {
   background-color: #f6cc08;
+  min-width: 50%;
 }
 
 .separateur {

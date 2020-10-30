@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 .menu {
   display: flex;
   justify-content: space-around;
+  font-size: 0.8rem;
 }
 
 .entree_menu {
@@ -46,15 +47,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .image_ab_bandeau img {
-  height: 44px;
+  height: 28px;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
 .cadre_vert_menu, .cadre_vert {
   background-color: $vert;
+  min-width: 50%;
 }
 
 .cadre_jaune_menu, .cadre_jaune {
   background-color: $jaune;
+  min-width: 50%;
 }
 
 .img_fond {
