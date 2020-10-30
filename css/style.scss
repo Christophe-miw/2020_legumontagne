@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@mixin img_100 {
+%img_100 {
   img {
     width: 100%;
   }
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .img_fond {
-  @include img_100;
+  @extend %img_100;
 }
 
 .separateur {
@@ -87,35 +87,50 @@ h1, h2, h3, h4, h5, h6 {
 .img-actu {
   width: 40%;
   margin-right: 20px;
-  @include img_100;
+  @extend %img_100;
 }
 
 .texte_actu {
   width: 60%;
 }
 
-.img-texte-legumes {
+@mixin bandeau-texte-couleur($cat) {
   height: 30px;
-  background-image: url("../img/texte-legumes-de-saison.png");
+  background-image: url("../img/texte-" + $cat + ".png");
   background-blend-mode: soft-light;
   background-repeat: repeat-x;
 }
 
-.producteur {
+.img-texte-legumes {
+  @include bandeau-texte-couleur('legumes-de-saison');
+}
+
+@mixin producteur($cat, $couleur, $var_couleur) {
   margin: 0 30px;
-  @include img_100;
-  .cadre_vert_titre {
+  @extend %img_100;
+  .cadre_#{$couleur}_titre {
     text-align: center;
-    background-color: $vert;
+    background-color: $var_couleur;
   }
   .img-producteur {
     margin: 20px 0;
   }
-  .slide-legumes {
+  .slide-#{$cat} {
     @include text_color_center(#fff);
-    background-color: $vert;
+    background-color: $var_couleur;
     font-size: 1.5rem;
     padding: 10px 0;
   }
 }
 
+.producteur_legumes {
+  @include producteur(legumes, vert, $vert);
+}
+
+.img-texte-pain {
+  @include bandeau-texte-couleur('pain-levain');
+}
+
+.producteur_pain {
+  @include producteur(pain, jaune, $jaune);
+}

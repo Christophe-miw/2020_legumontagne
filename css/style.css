@@ -2,6 +2,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+.img_fond img, .img-actu img, .producteur_legumes img, .producteur_pain img {
+  width: 100%;
+}
+
 .filtre_vert {
   background-color: #416c25;
   color: #fff;
@@ -54,10 +58,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f6cc08;
 }
 
-.img_fond img {
-  width: 100%;
-}
-
 .separateur {
   height: 30px;
 }
@@ -90,10 +90,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 20px;
 }
 
-.img-actu img {
-  width: 100%;
-}
-
 .texte_actu {
   width: 60%;
 }
@@ -105,24 +101,20 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: repeat-x;
 }
 
-.producteur {
+.producteur_legumes {
   margin: 0 30px;
 }
 
-.producteur img {
-  width: 100%;
-}
-
-.producteur .cadre_vert_titre {
+.producteur_legumes .cadre_vert_titre {
   text-align: center;
   background-color: #79b51d;
 }
 
-.producteur .img-producteur {
+.producteur_legumes .img-producteur {
   margin: 20px 0;
 }
 
-.producteur .slide-legumes {
+.producteur_legumes .slide-legumes {
   color: #fff;
   text-align: center;
   background-color: #79b51d;
@@ -130,7 +122,39 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0;
 }
 
-.producteur .slide-legumes a {
+.producteur_legumes .slide-legumes a {
+  color: inherit;
+}
+
+.img-texte-pain {
+  height: 30px;
+  background-image: url("../img/texte-pain-levain.png");
+  background-blend-mode: soft-light;
+  background-repeat: repeat-x;
+}
+
+.producteur_pain {
+  margin: 0 30px;
+}
+
+.producteur_pain .cadre_jaune_titre {
+  text-align: center;
+  background-color: #f6cc08;
+}
+
+.producteur_pain .img-producteur {
+  margin: 20px 0;
+}
+
+.producteur_pain .slide-pain {
+  color: #fff;
+  text-align: center;
+  background-color: #f6cc08;
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+.producteur_pain .slide-pain a {
   color: inherit;
 }
 
