@@ -58,6 +58,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.separateur {
+  height: 30px;
+}
+
 .row {
   display: -ms-flexbox;
   display: flex;
@@ -66,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .row_bandes {
   height: 20px;
-  margin: 0 0 50px 0;
+  margin: 0;
 }
 
 .row_bandes div {
@@ -92,6 +96,42 @@ h1, h2, h3, h4, h5, h6 {
 
 .texte_actu {
   width: 60%;
+}
+
+.img-texte-legumes {
+  height: 30px;
+  background-image: url("../img/texte-legumes-de-saison.png");
+  background-blend-mode: soft-light;
+  background-repeat: repeat-x;
+}
+
+.producteur {
+  margin: 0 30px;
+}
+
+.producteur img {
+  width: 100%;
+}
+
+.producteur .cadre_vert_titre {
+  text-align: center;
+  background-color: #79b51d;
+}
+
+.producteur .img-producteur {
+  margin: 20px 0;
+}
+
+.producteur .slide-legumes {
+  color: #fff;
+  text-align: center;
+  background-color: #79b51d;
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+.producteur .slide-legumes a {
+  color: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */
