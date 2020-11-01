@@ -56,7 +56,7 @@ abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
 }
@@ -187,7 +187,7 @@ select,
 summary,
 textarea {
   -ms-touch-action: manipulation;
-  touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 table {
@@ -332,135 +332,3 @@ template {
 [hidden] {
   display: none !important;
 }
-
-@font-face {
-  font-family: 'Vegur';
-  src: url("./src/fonts/Vegur-Regular-webfont.woff") format("woff");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'VegurBold';
-  src: url("./src/fonts/Vegur-Bold-webfont.woff");
-  font-weight: bold;
-}
-
-body {
-  font-family: Vegur;
-}
-
-.txtcenter {
-  text-align: center;
-}
-
-.flex {
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.flex.center {
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
-.flex.col {
-  -ms-flex-direction: column;
-      flex-direction: column;
-}
-
-.wrap {
-  width: 95%;
-  margin: 0 auto;
-}
-
-img {
-  width: 100%;
-}
-
-div.news {
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: baseline;
-      align-items: baseline;
-  font-family: VegurBold;
-  margin-bottom: 20px;
-}
-
-div.news div {
-  width: 45%;
-}
-
-div.news p.texte_actu {
-  font-family: VegurBold;
-}
-
-a {
-  color: black;
-}
-
-div.filtre_vert {
-  background-color: #4a6b2d;
-  color: white;
-}
-
-div.menu {
-  color: white;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  padding: 20px;
-}
-
-div.menu a {
-  color: white;
-}
-
-div.navbar {
-  color: black;
-  font-size: 0.75rem;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-}
-
-div.navbar img {
-  width: 50px;
-}
-
-div.cadre_jaune_menu {
-  height: 100%;
-  width: 50%;
-  height: 100%;
-  background-color: #f0ce3c;
-}
-
-div.cadre_vert_menu {
-  height: 100%;
-  width: 50%;
-  height: 100%;
-  background-color: #86b438;
-}
-
-div.cadre_vert {
-  height: 50px;
-  width: 50%;
-  height: 50px;
-  background-color: #86b438;
-}
-
-div.cadre_jaune {
-  height: 50px;
-  width: 50%;
-  height: 50px;
-  background-color: #f0ce3c;
-}
-
-div.news_container {
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
-  margin-bottom: 75px;
-}
-
-/*# sourceMappingURL=main.css.map */
