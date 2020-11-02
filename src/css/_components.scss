@@ -11,5 +11,22 @@ div.news {
     }
     p.texte_actu {
         font-family: VegurBold;
+        font-size: 1.15rem;
     }
+}
+
+div.cadre_jaune_menu {
+    @include cadre($yellow, 50%, 100%);
+}
+div.cadre_vert_menu {
+    @include cadre($light_green, 50%, 100%)
+}
+div.cadre_vert {
+    @include cadre($light_green, 50%, 50px)
+}
+div.cadre_jaune {
+    @include cadre($yellow, 50%, 50px)
+}
+div.cadre_vert_full { 
+    @include cadre($light_green, 100%, 50px)
 }
