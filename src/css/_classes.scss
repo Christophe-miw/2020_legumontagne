@@ -11,4 +11,7 @@
     &.col {
         flex-direction: column;
     }
+    &.spaceb {
+        justify-content: space-between;
+    }
 }

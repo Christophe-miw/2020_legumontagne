@@ -44,7 +44,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 p {
@@ -335,13 +335,13 @@ template {
 
 @font-face {
   font-family: 'Vegur';
-  src: url("./src/fonts/Vegur-Regular-webfont.woff") format("woff");
+  src: url("../../src/fonts/Vegur-Regular-webfont.woff") format("woff");
   font-style: normal;
 }
 
 @font-face {
   font-family: 'VegurBold';
-  src: url("./src/fonts/Vegur-Bold-webfont.woff");
+  src: url("../../src/fonts/Vegur-Bold-webfont.woff");
   font-weight: bold;
 }
 
@@ -370,8 +370,13 @@ body {
       flex-direction: column;
 }
 
+.flex.spaceb {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
 .wrap {
-  width: 95%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -379,17 +384,25 @@ img {
   width: 100%;
 }
 
+.row {
+  margin-bottom: 25px;
+}
+
 div.news {
   -ms-flex-pack: justify;
       justify-content: space-between;
-  -ms-flex-align: baseline;
-      align-items: baseline;
+  -ms-flex-align: center;
+      align-items: center;
   font-family: VegurBold;
   margin-bottom: 20px;
 }
 
-div.news div {
-  width: 45%;
+div.news div:first-of-type {
+  width: 40%;
+}
+
+div.news div:last-of-type {
+  width: 50%;
 }
 
 div.news p.texte_actu {
@@ -421,38 +434,47 @@ div.navbar {
   font-size: 0.75rem;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 75px;
+}
+
+div.navbar div.img_container {
+  height: 100%;
 }
 
 div.navbar img {
-  width: 50px;
+  height: 100%;
 }
 
 div.cadre_jaune_menu {
-  height: 100%;
   width: 50%;
   height: 100%;
   background-color: #f0ce3c;
 }
 
 div.cadre_vert_menu {
-  height: 100%;
   width: 50%;
   height: 100%;
   background-color: #86b438;
 }
 
 div.cadre_vert {
-  height: 50px;
   width: 50%;
   height: 50px;
   background-color: #86b438;
 }
 
 div.cadre_jaune {
-  height: 50px;
   width: 50%;
   height: 50px;
   background-color: #f0ce3c;
+}
+
+div.cadre_vert_full {
+  width: 100%;
+  height: 50px;
+  background-color: #86b438;
 }
 
 div.news_container {

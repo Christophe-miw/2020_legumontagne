@@ -68,9 +68,7 @@ function jsBabel() {
  * Les Watchers
  */
 function watcherSass() {
-	watch('./src/css/**/*.scss', { ignoreInitial: false }, sass).on('change', function() {
-		notify('CSS -> SCSS ==> OK').write('');
-	});
+	watch('./src/css/**/*.scss', { ignoreInitial: false }, sass);
 }
 
 function watcherJsConcatMinif() {

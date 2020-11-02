@@ -1,10 +1,13 @@
 div.news {
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     font-family: VegurBold;
     margin-bottom: 20px;
-    div {
-        width: 45%;
+    div:first-of-type {
+        width: 40%;
+    }
+    div:last-of-type {
+        width: 50%;
     }
     p.texte_actu {
         font-family: VegurBold;

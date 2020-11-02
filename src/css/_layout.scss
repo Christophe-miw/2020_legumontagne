@@ -20,27 +20,29 @@ div.navbar {
     color: black;
     font-size: 0.75rem;
     justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    div.img_container {
+        height: 100%;
+    }
     img {
-        width: 50px;
+        height: 100%;
     }
 }
 div.cadre_jaune_menu {
-    height: 100%;
-    @include cadre($yellow, 50%, 100%)
+    @include cadre($yellow, 50%, 100%);
 }
 div.cadre_vert_menu {
-    height: 100%;
     @include cadre($light_green, 50%, 100%)
 }
-
-
 div.cadre_vert {
-    height: 50px;
     @include cadre($light_green, 50%, 50px)
 }
 div.cadre_jaune {
-    height: 50px;
     @include cadre($yellow, 50%, 50px)
+}
+div.cadre_vert_full { 
+    @include cadre($light_green, 100%, 50px)
 }
 
 div.news_container {
