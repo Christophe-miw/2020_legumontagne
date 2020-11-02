@@ -1,0 +1,232 @@
+$vert_fonce: #416c25;
+$vert: #79b51d;
+$jaune: #f6cc08;
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+@mixin text_color_center($color) {
+  color: $color;
+  text-align: center;
+  a {
+    color: inherit;
+  }
+}
+
+%img_100 {
+  img {
+    width: 100%;
+  }
+}
+
+.filtre_vert {
+  background-color: $vert_fonce;
+  @include text_color_center(#fff);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.entree_menu {
+  padding: 10px;
+}
+
+.bandeau_menu {
+  @extend .menu;
+  @include text_color_center(#000);
+  .image_ab_bandeau {
+    flex-grow: 0;
+    padding: 0;
+  }
+  div {
+    flex-grow: 1;
+    padding: 10px 0;
+    font-size: 0.8rem;
+  }
+}
+
+.image_ab_bandeau img {
+  height: 48px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.cadre_vert_menu, .cadre_vert {
+  background-color: $vert;
+  min-width: 50%;
+}
+
+.cadre_jaune_menu, .cadre_jaune {
+  background-color: $jaune;
+  min-width: 50%;
+}
+
+.img_fond {
+  @extend %img_100;
+}
+
+.separateur {
+  height: 30px;
+}
+
+.row {
+  display: flex;
+  margin: 10px;
+}
+
+.row_bandes {
+  height: 20px;
+  margin: 0;
+  div {
+    width: 50%;
+  }
+}
+
+.actus {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.img-actu {
+  width: 40%;
+  margin-right: 20px;
+  @extend %img_100;
+}
+
+.texte_actu {
+  width: 60%;
+}
+
+@mixin bandeau-texte-couleur($cat) {
+  height: 30px;
+  background-image: url("../img/texte-" + $cat + ".png");
+  background-blend-mode: soft-light;
+  background-repeat: repeat-x;
+}
+
+.img-texte-legumes {
+  @include bandeau-texte-couleur('legumes-de-saison');
+}
+
+@mixin producteur($cat, $couleur, $var_couleur) {
+  margin: 0 30px;
+  @extend %img_100;
+  .cadre_#{$couleur}_titre {
+    text-align: center;
+    background-color: $var_couleur;
+  }
+  .img-producteur {
+    margin: 20px 0;
+  }
+  .slide-#{$cat} {
+    @include text_color_center(#fff);
+    background-color: $var_couleur;
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+}
+
+.producteur_legumes {
+  @include producteur(legumes, vert, $vert);
+}
+
+.img-texte-pain {
+  @include bandeau-texte-couleur('pain-levain');
+}
+
+.producteur_pain {
+  @include producteur(pain, jaune, $jaune);
+}
+
+.ou-nous-trouver {
+  padding: 0 30px;
+  @extend %img_100;
+  h2 {
+    @include text_color_center(#000);
+  }
+    background-image: url("../img/photo-ancelle.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cadre_vert_bas {
+  @extend .cadre_vert;
+  order: 1;
+}
+
+.cadre_jaune_bas {
+  @extend .cadre_jaune;
+  order: 0;
+}
+
+.footer div.filtre_vert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+}
+
+.mentions_legales {
+  text-align: left;
+  order: 1;
+}
+
+.bouton_contact {
+  order: 0;
+  button {
+    color: $vert_fonce;
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .bg_photo .filtre_vert {
+    background-image: url("../img/background.jpg");
+    background-position-x: center;
+    background-blend-mode: multiply;
+    filter: contrast(1.5) brightness(1.5);
+    .menu {
+      justify-content: flex-end;
+      margin-right: 30px;
+    }
+  }
+  .bg_photo {
+    position: absolute;
+    width: 100%;
+  }
+  .bgmobile_photo {
+    display: none;
+  }
+  .img_fond {
+    height: 538px;
+    background-image: url("../img/background.jpg");
+    background-position-x: center;
+    background-size: cover;
+  }
+
+  .actus {
+    flex-direction: row;
+    margin: 20px auto;
+    max-width: 900px;
+    .actus_legumes, .actus_pain {
+      width: 50%;
+    }
+  }
+
+}
+
+//faire en sorte que le background soit raccord avec celui de .img_fond
+@media screen and (min-width: 1359px) {
+  .filtre_vert {
+    background-size: cover;
+  }
+}

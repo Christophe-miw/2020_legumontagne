@@ -1,0 +1,270 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.img_fond img, .img-actu img, .producteur_legumes img, .producteur_pain img, .ou-nous-trouver img {
+  width: 100%;
+}
+
+.filtre_vert {
+  background-color: #416c25;
+  color: #fff;
+  text-align: center;
+}
+
+.filtre_vert a {
+  color: inherit;
+}
+
+.menu, .bandeau_menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.entree_menu {
+  padding: 10px;
+}
+
+.bandeau_menu {
+  color: #000;
+  text-align: center;
+}
+
+.bandeau_menu a {
+  color: inherit;
+}
+
+.bandeau_menu .image_ab_bandeau {
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  padding: 0;
+}
+
+.bandeau_menu div {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding: 10px 0;
+  font-size: 0.8rem;
+}
+
+.image_ab_bandeau img {
+  height: 48px;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.cadre_vert_menu, .cadre_vert, .cadre_vert_bas {
+  background-color: #79b51d;
+  min-width: 50%;
+}
+
+.cadre_jaune_menu, .cadre_jaune, .cadre_jaune_bas {
+  background-color: #f6cc08;
+  min-width: 50%;
+}
+
+.separateur {
+  height: 30px;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+}
+
+.row_bandes {
+  height: 20px;
+  margin: 0;
+}
+
+.row_bandes div {
+  width: 50%;
+}
+
+.actus {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin: 20px;
+}
+
+.img-actu {
+  width: 40%;
+  margin-right: 20px;
+}
+
+.texte_actu {
+  width: 60%;
+}
+
+.img-texte-legumes {
+  height: 30px;
+  background-image: url("../img/texte-legumes-de-saison.png");
+  background-blend-mode: soft-light;
+  background-repeat: repeat-x;
+}
+
+.producteur_legumes {
+  margin: 0 30px;
+}
+
+.producteur_legumes .cadre_vert_titre {
+  text-align: center;
+  background-color: #79b51d;
+}
+
+.producteur_legumes .img-producteur {
+  margin: 20px 0;
+}
+
+.producteur_legumes .slide-legumes {
+  color: #fff;
+  text-align: center;
+  background-color: #79b51d;
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+.producteur_legumes .slide-legumes a {
+  color: inherit;
+}
+
+.img-texte-pain {
+  height: 30px;
+  background-image: url("../img/texte-pain-levain.png");
+  background-blend-mode: soft-light;
+  background-repeat: repeat-x;
+}
+
+.producteur_pain {
+  margin: 0 30px;
+}
+
+.producteur_pain .cadre_jaune_titre {
+  text-align: center;
+  background-color: #f6cc08;
+}
+
+.producteur_pain .img-producteur {
+  margin: 20px 0;
+}
+
+.producteur_pain .slide-pain {
+  color: #fff;
+  text-align: center;
+  background-color: #f6cc08;
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+.producteur_pain .slide-pain a {
+  color: inherit;
+}
+
+.ou-nous-trouver {
+  padding: 0 30px;
+  background-image: url("../img/photo-ancelle.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ou-nous-trouver h2 {
+  color: #000;
+  text-align: center;
+}
+
+.ou-nous-trouver h2 a {
+  color: inherit;
+}
+
+.cadre_vert_bas {
+  -ms-flex-order: 1;
+      order: 1;
+}
+
+.cadre_jaune_bas {
+  -ms-flex-order: 0;
+      order: 0;
+}
+
+.footer div.filtre_vert {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.footer div.filtre_vert p {
+  margin: 0;
+}
+
+.mentions_legales {
+  text-align: left;
+  -ms-flex-order: 1;
+      order: 1;
+}
+
+.bouton_contact {
+  -ms-flex-order: 0;
+      order: 0;
+}
+
+.bouton_contact button {
+  color: #416c25;
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 900px) {
+  .bg_photo .filtre_vert {
+    background-image: url("../img/background.jpg");
+    background-position-x: center;
+    background-blend-mode: multiply;
+    -webkit-filter: contrast(1.5) brightness(1.5);
+            filter: contrast(1.5) brightness(1.5);
+  }
+  .bg_photo .filtre_vert .menu, .bg_photo .filtre_vert .bandeau_menu {
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    margin-right: 30px;
+  }
+  .bg_photo {
+    position: absolute;
+    width: 100%;
+  }
+  .bgmobile_photo {
+    display: none;
+  }
+  .img_fond {
+    height: 538px;
+    background-image: url("../img/background.jpg");
+    background-position-x: center;
+    background-size: cover;
+  }
+  .actus {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    margin: 20px auto;
+    max-width: 900px;
+  }
+  .actus .actus_legumes, .actus .actus_pain {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1359px) {
+  .filtre_vert {
+    background-size: cover;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
