@@ -28,7 +28,6 @@ h1, h2, h3, h4, h5, h6 {
 .menu {
   display: flex;
   justify-content: space-around;
-  font-size: 0.8rem;
 }
 
 .entree_menu {
@@ -40,14 +39,17 @@ h1, h2, h3, h4, h5, h6 {
   @include text_color_center(#000);
   .image_ab_bandeau {
     flex-grow: 0;
+    padding: 0;
   }
   div {
     flex-grow: 1;
+    padding: 10px 0;
+    font-size: 0.8rem;
   }
 }
 
 .image_ab_bandeau img {
-  height: 28px;
+  height: 48px;
   position: absolute;
   transform: translateX(-50%);
 }
@@ -183,5 +185,39 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
     border: 0;
     border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .filtre_vert {
+    background-image: url("../img/background.jpg");
+    background-position-x: center;
+    background-blend-mode: multiply;
+    filter: contrast(1.5) brightness(1.5);
+    .menu {
+      justify-content: flex-end;
+      margin-right: 30px;
+    }
+  }
+  .bg_photo {
+    position: absolute;
+    width: 100%;
+  }
+  .bgmobile_photo {
+    display: none;
+  }
+  .img_fond {
+    height: 538px;
+    background-image: url("../img/background.jpg");
+    background-position-x: center;
+    background-size: cover;
+  }
+
+}
+
+//faire en sorte que le background soit raccord avec celui de .img_fond
+@media screen and (min-width: 1359px) {
+  .filtre_vert {
+    background-size: cover;
   }
 }
