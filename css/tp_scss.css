@@ -1,0 +1,246 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/***********************************/
+/*             DEFAULT             */
+/*            TELEPHONE            */
+/***********************************/
+.filtre_vert {
+  background-color: #416C25;
+  color: #FFFEFF;
+}
+
+.filtre_vert a {
+  color: #FFFEFF;
+  text-decoration: none;
+}
+
+.flexColumn {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.flexBoxItem {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin: 20px;
+}
+
+.flexBoxItem1 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.flexBox {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.flexBox2 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+a {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.cadre_jaune_menu, .cadre_jaune {
+  -ms-flex: 2;
+      flex: 2;
+  background-color: #F7CB06;
+  text-align: right;
+}
+
+.cadre_jaune_menu a, .cadre_jaune a {
+  color: #010000;
+  text-decoration: none;
+}
+
+.cadre_vert_menu, .cadre_vert {
+  -ms-flex: 2;
+      flex: 2;
+  background-color: #7AB51D;
+  text-align: left;
+}
+
+.cadre_vert_menu a, .cadre_vert a {
+  color: #010000;
+  text-decoration: none;
+}
+
+.img-menu {
+  width: 45px;
+}
+
+.img-menu img {
+  -ms-flex: 0;
+      flex: 0;
+}
+
+.itemCenter {
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.borderItem {
+  width: 45%;
+}
+
+.icone-actu {
+  width: 100px;
+  height: auto;
+}
+
+.cadre_vert_titre {
+  background-color: #7AB51D;
+  color: black;
+  text-align: center;
+}
+
+.cadre_jaune_titre {
+  background-color: #F7CB06;
+  color: black;
+  text-align: center;
+}
+
+.cadre_jaune, .cadre_vert {
+  width: 100%;
+  height: auto;
+}
+
+.item1_1 {
+  -ms-flex-order: 1;
+      order: 1;
+}
+
+.item1_2 {
+  -ms-flex-order: 2;
+      order: 2;
+}
+
+.item1_3 {
+  -ms-flex-order: 0;
+      order: 0;
+  font-size: 1em;
+  color: transparent;
+}
+
+.item1_3::before {
+  content: '_';
+}
+
+footer {
+  color: white;
+  background-color: #416C25;
+}
+
+.footer-page h2 {
+  text-align: center;
+}
+
+/***********************************/
+/*             TABLETTE            */
+/***********************************/
+@media screen and (min-width: 768px) {
+  .flexBox {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+  }
+  .filtre_vert {
+    background-color: transparent;
+  }
+}
+
+/***********************************/
+/*             DESKTOP             */
+/***********************************/
+@media screen and (min-width: 970px) {
+  .flexBox {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+  }
+  .filtre_vert {
+    background-color: transparent;
+    color: white;
+  }
+}
+
+/***********************************/
+/*               TV                */
+/***********************************/
+@media screen and (min-width: 1370px) {
+  .flexBox {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+  }
+  .filtre_vert {
+    background-color: transparent;
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=tp_scss.css.map */

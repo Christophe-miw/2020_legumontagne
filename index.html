@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<link href="../SCSS/css/tp_scss.css" rel="stylesheet">
 		<title>Légumontagne</title>
 		<style type="text/css">
 			@font-face {
@@ -26,7 +27,7 @@
 			<!--navigation-->		
 				<header>
 					<div class="filtre_vert">
-						<div class="">
+						<div class="flexBox">
 
 							<div class="">
 								<h4 class="position_menu"><a href="#noustrouver">Où nous trouver</a></h4>
@@ -35,30 +36,29 @@
 								<h4 class="position_menu"><a href="#contact">Contactez-nous</a></h4>
 							</div>
 						</div>
-						<div class="">
+						<div class="flexBox">
 							<div class="">
 							<img src="img/logo legumontagne.png" alt="Logo légumontagne" />
 							</div>
 						</div>
-						<div class="">
+						<div class="flexBox">
 							<div class="">
 							<h1>Vente directe de produits Bio</h1>
 							</div>
 						</div>
 					</div>
 
-					<div class="">
+					<div class="flexBox2">
 							<div class="cadre_jaune_menu">
 								<h2><a href="#pain">Pain au levain</a></h2>
 							</div>
-							<div class="">
+							<div class="img-menu">
 								<img class="image-logo" src="img/logo-ab-vign.jpg" alt="Logo Agriculture Biologique" />
 							</div>
 							<div class="cadre_vert_menu">
 								<h2><a href="#legumes">Légumes de saison</a></h2>
 							</div>
 						</div>
-					</div>
 				</header>
 			<!--Fin navigation-->
 			</div>
@@ -74,18 +74,18 @@
 					<!--Fin image fond version mobile-->
 					
 					<!--Début bandes vert - jaune-->
-					<div class="row">
-						<div class="cadre_vert"></div>
-						<div class="cadre_jaune"></div>
+					<div class="flexBoxItem1">
+						<div class="cadre_vert"><br></div>
+						<div class="cadre_jaune"><br></div>
 					</div>	
 
 					<!--Début partie actus légumes-->		
-					<div class="">
-						<div class="">
+					<div class="flexColumn flexBoxItem">
+						<div class="bkrg-header">
 						</div>
 						<div class="">
-							<div class="">
-								<div class="">
+							<div class="flexBoxItem1">
+								<div class="itemCenter">
 									<img class="icone-actu" src="img/news-legumes.jpg" alt="Logo News légumes" />
 								</div>
 								<div class="">
@@ -94,12 +94,12 @@
 							</div>
 							
 							<!--Ajout actu 1-->
-							<div class="">						
+							<div class="flexBoxItem1">
 								<div class="actu">
 									<img class="img-actu" src="img/tomates.jpg" alt="Logo News légumes" />
 								</div>
 									
-								<div class="">
+								<div class="borderItem">
 									<p class="texte_actu">
 									Exceptionnellement rendez-vous au marché de Gap ce samedi !
 									</p>	
@@ -107,12 +107,12 @@
 							</div>
 							<!--Fin de l'actu 1-->
 							<!--Ajout actu 2-->
-							<div class="">						
+							<div class="flexBoxItem1">
 								<div class="actu">
 									<img class="img-actu" src="img/tomates.jpg" alt="Logo News légumes" />
 								</div>
 									
-								<div class="">
+								<div class="borderItem">
 									<p class="texte_actu">
 									Je serai à la fête del’agriculture le 20.05.18 à Saint-Bonnet
 									</p>	
@@ -125,22 +125,22 @@
 					<!--Début partie actus pain-->		
 
 						<div class="">
-							<div class="">
-								<div class="">
+							<div class="flexBoxItem1">
+								<div class="itemCenter">
 									<img class="icone-actu" src="img/news-pain.png" alt="Logo News pain" />
 								</div>
-								<div class="">	
+								<div class="itemCenter">
 									<h2>Pain au levain</h2>
 								</div>
 							</div>
 							
 							<!--Ajout actu 1-->
-							<div class="">						
+							<div class="flexBoxItem1">
 								<div class="actu">
 									<img class="img-actu" src="img/pain.jpg" alt="Logo News pain" />
 								</div>
 									
-								<div class="">
+								<div class="borderItem">
 									<p class="texte_actu">
 									Nouveau pain bio multi-graines, venez le découvrir !
 									</p>	
@@ -159,7 +159,7 @@
 		<!--Début page producteur légumes-->
 		<section class="page_legumes">		
 
-			<div class="">
+			<div class="flexBoxItem">
 				<div class="">
 					<div id="legumes" class="cadre_vert img-texte-legumes">
 					</div>
@@ -168,14 +168,14 @@
 					<div class="">
 					</div>
 					<div class="">
-							<h2 class="cadre_vert_titre">Jacques, producteur de légumes</h2>
+							<h2 class="cadre_vert_titre flexBox2">Jacques, producteur de légumes</h2>
 							<img class="img-producteur" src="img/producteur-legumes.jpg" alt="Photo du producteur de légumes" title="Photo du producteur de légumes" />
 							<p class="">Présentation suscinte du producteur avec un texte de remplace ici Le faux-texte (également appelé lorem ipsum, lipsum, ou bolo bolo1) est, en imprimerie, un texte sans signification, dont le seul objectif est de calibrer le contenu d'une page par du texte, fût-il non éditorial, pour travailler sur la seule mise en forme de la page.. un texte de remplace ici Le faux-texte (également appelé lorem ipsum, lipsum, ou bolo bolo1) est, en imprimerie, un texte sans signification, dont le seul objectif est de calibrer le contenu d'une page par du texte, fût-il non éditorial, pour travailler sur la seule mise en forme de la page.</p>
 					</div>
 
 					<div class="">
 					<!--Début slide légumes-->
-						<div id="carousel_legume" class="">
+						<div id="carousel_legume2" class=" cadre_vert_titre">
 						  <div class="">
 							<div class="">
 								<img class="" src="img/slide-legume1.jpg" alt="photo légumes">
@@ -194,7 +194,7 @@
 			<!--Début page producteur pain-->			
 		<section class="page_pain">				
 
-			<div class="">
+			<div class="flexBoxItem">
 				<div class="">
 					<div id="pain" class="cadre_jaune img-texte-pain">
 					</div>
@@ -202,7 +202,7 @@
 				<div class="">
 					<div class="">
 					<!--Début slide pain-->
-						<div id="carousel_legume" class="">
+						<div id="carousel_legume" class="cadre_jaune_titre">
 						  <div class="">
 							<div class="">
 								<img src="img/slide-pain1.jpg" alt="photo pain 1">
@@ -214,7 +214,7 @@
 						
 					</div>
 					<div class="">
-						<h2 class="cadre_jaune_titre">Jean, producteur de pain</h2>
+						<h2 class="cadre_jaune_titre flexBox2">Jean, producteur de pain</h2>
 						<img class="img-producteur" src="img/producteur-pain.jpg" alt="Photo du producteur de pain" title="Photo du producteur de pain" />
 						<p class="">Présentation suscinte du producteur avec un texte de remplace ici Le faux-texte (également appelé lorem ipsum, lipsum, ou bolo bolo1) est, en imprimerie, un texte sans signification, dont le seul objectif est de calibrer le contenu d'une page par du texte, fût-il non éditorial, pour travailler sur la seule mise en forme de la page.. un texte de remplace ici Le faux-texte (également appelé lorem ipsum, lipsum, ou bolo bolo1) est, en imprimerie, un texte sans signification, dont le seul objectif est de calibrer le contenu d'une page par du texte, fût-il non éditorial, pour travailler sur la seule mise en forme de la page.</p>
 					</div>
@@ -233,16 +233,16 @@
 
 			<!--Début partie nous trouver-->
 			<div id="noustrouver" class="img-nous-trouver">
-				<div class="row">
-					<div class="cadre_vert"></div>
-					<div class="cadre_jaune"></div>
+				<div class="flexBoxItem1">
+					<div class="cadre_vert"><br></div>
+					<div class="cadre_jaune"><br></div>
 				</div>
-				
-				
-				<div class="">
+
+
+				<div class="flexBoxItem">
 					<div class="">
 					</div>
-					<div class="">
+					<div class="footer-page">
 							<h2>Où nous trouver ?</h2>
 							<p><b>Ancelle :</b></p>
 							<p>marché le dimanche matin, place de la mairie</p>
@@ -255,30 +255,29 @@
 					<div class="">
 						<img class="img-localisation" src="img/carte.jpg" alt="carte des marchés" /> <!--carte desktop 490x330 px-->
 					</div>
-					<div class=""></div>
+					<div class="fond"></div>
 				</div>
 
-				<div class="">
-					<div class="cadre_vert_bas"></div>
-					<div class="cadre_jaune_bas"></div>
-					
-				</div>	
-				
+				<div class="flexBoxItem1">
+					<div class="cadre_vert"><br></div>
+					<div class="cadre_jaune"><br></div>
+				</div>
+
 			</div>
 			<!--Fin partie nous trouver-->
 		<!--</main>-->
 		
 		
 			<!--Début partie footer-->
-			<footer class="footer">
-				<div class="">
-					<div class=""></div>
-					<div class="">
+			<footer class="footer flexBox">
+				<div class="flexColumn">
+					<div class="item1_3"></div>
+					<div class="item1_2">
 						<p>Mentions légales</p>
 						<p>© Gamuza</p>
 									
 					</div>
-					<div class="">
+					<div class="item1_1">
 
 						<button class="" type="button"><a id="contact">Contactez-nous</a></button>
 					</div>

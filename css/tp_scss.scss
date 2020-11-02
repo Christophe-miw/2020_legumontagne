@@ -1,0 +1,223 @@
+$ground_header: #416C25;
+$text-header: #FFFEFF;
+
+$cadre1-menu: #F7CB06;
+$cadre2-menu: #7AB51D;
+$color-menu: #010000;
+$taille-img: 70px;
+$taille-img2: 100%;
+
+@mixin display-flex($justify-content,$flex-wrap,$flex-direction) {
+  display: flex;
+  justify-content: $justify-content;
+  flex-wrap: $flex-wrap;
+  flex-direction: $flex-direction;
+}
+
+@mixin colored($bkg,$col) {
+  color: $col;
+  background-color: $bkg;
+}
+
+@mixin baliseA($color,$decoration) {
+  color: $color;
+  text-decoration: $decoration;
+}
+
+
+// INITALISATION
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0px;
+}
+
+img {
+  width: $taille-img2;
+  height: auto;
+}
+
+// DEBUT STYLE
+
+/***********************************/
+/*             DEFAULT             */
+/*            TELEPHONE            */
+/***********************************/
+
+.filtre_vert {
+  background-color: $ground_header;
+  color: $text-header;
+
+  a {
+    @include baliseA($text-header, none);
+  }
+}
+
+.flexColumn {
+  @include display-flex(space-around, wrap, column);
+}
+
+.flexBoxItem {
+  @include display-flex(space-around, wrap, row);
+  margin: 20px;
+}
+
+.flexBoxItem1 {
+  @include display-flex(space-around, wrap, row);
+}
+
+.flexBox {
+  @include display-flex(space-around, wrap, row);
+}
+
+.flexBox2 {
+  @include display-flex(center, nowrap, row);
+}
+
+a {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.cadre_jaune_menu, .cadre_jaune {
+  flex: 2;
+  background-color: $cadre1-menu;
+  text-align: right;
+
+  a {
+    @include baliseA($color-menu, none);
+  }
+}
+
+.cadre_vert_menu, .cadre_vert {
+  flex: 2;
+  background-color: $cadre2-menu;
+  text-align: left;
+
+  a {
+    @include baliseA($color-menu, none);
+  }
+}
+
+.img-menu {
+  width: 45px;
+
+  img {
+    flex: 0;
+
+  }
+}
+
+.itemCenter {
+  align-items: center;
+  align-content: center;
+}
+
+.borderContent {
+  //padding: 10px;
+}
+
+.borderItem {
+  width: 45%;
+}
+
+.icone-actu {
+  width: 100px;
+  height: auto;
+}
+
+.cadre_vert_titre {
+  background-color: $cadre2-menu;
+  color: black;
+  text-align: center;
+}
+
+.cadre_jaune_titre {
+  background-color: $cadre1-menu;
+  color: black;
+  text-align: center;
+}
+
+.cadre_jaune, .cadre_vert {
+  width: 100%;
+  height: auto;
+}
+
+.item1_1 {
+  order: 1;
+}
+
+.item1_2 {
+  order: 2;
+}
+
+.item1_3 {
+  order: 0;
+  font-size: 1em;
+  color: transparent;
+
+  &::before {
+    content: '_';
+  }
+}
+
+.fond {
+
+}
+
+footer {
+  @include colored($ground_header, white);
+}
+
+.footer-page {
+  h2 {
+    text-align: center;
+  }
+}
+
+/***********************************/
+/*             TABLETTE            */
+/***********************************/
+@media screen and (min-width: 768px) {
+  .flexBox {
+    @include display-flex(flex-start, wrap, row-reverse);
+  }
+  .filtre_vert {
+    background-color: transparent;
+  }
+}
+
+/***********************************/
+/*             DESKTOP             */
+/***********************************/
+@media screen and (min-width: 970px) {
+  .flexBox {
+    @include display-flex(flex-start, wrap, row-reverse);
+  }
+  .filtre_vert {
+    background-color: transparent;
+    color: white;
+  }
+  .bkrg-header {
+    //background-image: url("img/logo-ab-vign.jpg");
+  }
+}
+
+/***********************************/
+/*               TV                */
+/***********************************/
+@media screen and (min-width: 1370px) {
+  .flexBox {
+    @include display-flex(flex-start, wrap, row-reverse);
+  }
+  .filtre_vert {
+    background-color: transparent;
+    color: white;
+  }
+
+}
+
