@@ -139,3 +139,39 @@ h1, h2, h3, h4, h5, h6 {
 .producteur_pain {
   @include producteur(pain, jaune, $jaune);
 }
+
+.ou-nous-trouver {
+  padding: 0 30px;
+  @extend %img_100;
+  h2 {
+    @include text_color_center(#000);
+  }
+    background-image: url("../img/photo-ancelle.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cadre_vert_bas {
+  @extend .cadre_vert;
+  order: 1;
+}
+
+.cadre_jaune_bas {
+  @extend .cadre_jaune;
+  order: 0;
+}
+
+.mentions_legales {
+  order: 1;
+}
+
+.bouton_contact {
+  order: 0;
+  button {
+    color: $vert_fonce;
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+  }
+}
