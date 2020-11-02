@@ -191,6 +191,13 @@ h1, h2, h3, h4, h5, h6 {
       order: 0;
 }
 
+.footer div.filtre_vert {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
 .mentions_legales {
   -ms-flex-order: 1;
       order: 1;
