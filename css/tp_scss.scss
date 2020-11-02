@@ -1,0 +1,97 @@
+$ground_header: #416C25;
+$text-header: #FFFEFF;
+
+$cadre1-menu: #F7CB06;
+$cadre2-menu: #7AB51D;
+$color-menu: #010000;
+$taille-img: 70px;
+$taille-img2: 100%;
+
+@mixin flex($justify-content,$flex-wrap,$flex-direction) {
+  display: flex;
+  justify-content: $justify-content;
+  flex-wrap: $flex-wrap;
+  flex-direction: $flex-direction;
+}
+
+@mixin baliseA($color,$decoration) {
+  color: $color;
+  text-decoration: $decoration;
+}
+
+// INITALISATION
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5{
+  margin: 0px;
+}
+
+img {
+  width: $taille-img2;
+  height: auto;
+}
+
+// DEBUT STYLE
+.filtre_vert {
+  background-color: $ground_header;
+  color: $text-header;
+
+  a {
+    @include baliseA($text-header, none);
+  }
+}
+
+.flexColumn {
+  @include flex(space-around, wrap, column);
+}
+
+.flexBoxItem {
+  @include flex(center, wrap, row);
+}
+
+.flexBox {
+  @include flex(space-around, wrap, row);
+}
+
+.flexBox2 {
+  @include flex(center, nowrap, row);
+
+  a {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+.cadre_jaune_menu, .cadre_jaune {
+  flex: 2;
+  background-color: $cadre1-menu;
+  text-align: right;
+
+  a {
+    @include baliseA($color-menu, none);
+  }
+}
+
+.cadre_vert_menu, .cadre_vert {
+  flex: 2;
+  background-color: $cadre2-menu;
+  text-align: left;
+
+  a {
+    @include baliseA($color-menu, none);
+  }
+}
+
+.img-menu {
+  img {
+    flex: 0;
+  }
+}
+.itemCenter{
+  align-items: center;
+  align-content: center;
+}
