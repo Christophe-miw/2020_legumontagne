@@ -1,0 +1,5 @@
+@mixin cadre($color, $width, $height) {
+    width: $width;
+    height: $height;
+    background-color: $color;
+}
