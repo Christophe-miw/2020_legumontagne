@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media screen and (min-width: 900px) {
-  .filtre_vert {
+  .bg_photo .filtre_vert {
     background-image: url("../img/background.jpg");
     background-position-x: center;
     background-blend-mode: multiply;
@@ -211,6 +211,15 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url("../img/background.jpg");
     background-position-x: center;
     background-size: cover;
+  }
+
+  .actus {
+    flex-direction: row;
+    margin: 20px auto;
+    max-width: 900px;
+    .actus_legumes, .actus_pain {
+      width: 50%;
+    }
   }
 
 }
