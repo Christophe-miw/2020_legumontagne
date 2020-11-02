@@ -196,9 +196,16 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.footer div.filtre_vert p {
+  margin: 0;
 }
 
 .mentions_legales {
+  text-align: left;
   -ms-flex-order: 1;
       order: 1;
 }
